@@ -1,9 +1,9 @@
 
-import FacebookIcon from '../assets/icons/Facebook_black.png';
-import InstagramIcon from '../assets/icons/Instagram_black.png';
-import LinkedInIcon from '../assets/icons/LinkedIN_black.png';
-import PinterestIcon from '../assets/icons/Pinterest_black.png';
-import YoutubeIcon from '../assets/icons/Youtube_black.png';
+import FacebookIcon from '../../public/assets/icons/Facebook_black.png';
+import InstagramIcon from '../../public/assets/icons/Instagram_black.png';
+import LinkedInIcon from '../../public/assets/icons/LinkedIN_black.png';
+import PinterestIcon from '../../public/assets/icons/Pinterest_black.png';
+import YoutubeIcon from '../../public/assets/icons/Youtube_black.png';
 
 const Footer = () => {
   return (

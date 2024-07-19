@@ -2,10 +2,10 @@
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import omarPacha from '../assets/images/omar_pacha_2005.115.2.jpg';
-import portraitOfAMan from '../assets/images/portrait_of_a_man_2006.170.19.jpg';
-import portraitOfATelegrapherBoy from '../assets/images/portrait_of_a_telegrapher_boy_2023.146.83.jpg';
-import theBeanSorters from '../assets/images/the_bean_sorters_2005.57.2.jpg';
+import omarPacha from '../../public/assets/images/omar_pacha_2005.115.2.jpg';
+import portraitOfAMan from '../../public/assets/images/portrait_of_a_man_2006.170.19.jpg';
+import portraitOfATelegrapherBoy from '../../public/assets/images/portrait_of_a_telegrapher_boy_2023.146.83.jpg';
+import theBeanSorters from '../../public/assets/images/the_bean_sorters_2005.57.2.jpg';
 
 const Home = () => {
   const { t } = useTranslation();

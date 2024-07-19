@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "Snow in New York, 1902",
-      "image_link": "./src/assets/data-images/snow_in_new_york_1954.4.3.jpg",
+      "image_link": "public/assets/data-images/snow_in_new_york_1954.4.3.jpg",
       "artist": "Robert Henri",
       "format": "Oil on canvas",
       "date": "1902",
@@ -16,7 +16,7 @@
     {
         "id": 2,
       "title": "Young Woman in White, 1904",
-      "image_link": "src/assets/data-images/young_woman_in_white_1949.9.1.jpg",
+      "image_link": "public/assets/data-images/young_woman_in_white_1949.9.1.jpg",
       "artist": "Robert Henri",
       "format": "Oil on canvas",
       "date": "1904",
@@ -30,7 +30,7 @@
     {
         "id": 3,
       "title": "Club Night, 1907",
-      "image_link": "src/assets/data-images/blue_morning_1963.10.82.jpg",
+      "image_link": "public/assets/data-images/blue_morning_1963.10.82.jpg",
       "artist": "George Bellows",
       "format": "Oil on canvas",
       "date": "1907",
@@ -44,7 +44,7 @@
     {
         "id": 4,
       "title": "Forty-two Kids, 1907",
-      "image_link": "src/assets/data-images/forty-two_kids_2014.79.2.jpg",
+      "image_link": "public/assets/data-images/forty-two_kids_2014.79.2.jpg",
       "artist": "George Bellows",
       "format": "Oil on canvas",
       "date": "1907",
@@ -58,7 +58,7 @@
     {
         "id": 5,
       "title": "Little Girl in White (Queenie Burnett), 1907",
-      "image_link": "src/assets/data-images/little_girl_in_white_(queenie_burnett)_1983.1.2.jpg",
+      "image_link": "public/assets/data-images/little_girl_in_white_(queenie_burnett)_1983.1.2.jpg",
       "artist": "George Bellows",
       "format": "Oil on canvas",
       "date": "1907",
@@ -72,7 +72,7 @@
     {
         "id": 6,
       "title": "Both Members of This Club, 1909",
-      "image_link": "src/assets/data-images/both_members_of_this_club_1944.13.1.jpg",
+      "image_link": "public/assets/data-images/both_members_of_this_club_1944.13.1.jpg",
       "artist": "George Bellows",
       "format": "Oil on canvas",
       "date": "1909",
