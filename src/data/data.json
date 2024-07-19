@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "Snow in New York, 1902",
-      "image_link": "src/assets/data-images/snow_in_new_york_1954.4.3.jpg",
+      "image_link": "./src/assets/data-images/snow_in_new_york_1954.4.3.jpg",
       "artist": "Robert Henri",
       "format": "Oil on canvas",
       "date": "1902",
