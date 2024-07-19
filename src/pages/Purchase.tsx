@@ -1,4 +1,3 @@
-// src/pages/Purchase.tsx
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -101,12 +100,13 @@ const Purchase: React.FC = () => {
           <h2 className="text-xl font-bold mb-4">{t('contact_information')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('first_last_name')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('first_last_name')} *</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
+                placeholder={t('enter_first_last_name')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
@@ -118,16 +118,18 @@ const Purchase: React.FC = () => {
                 name="company"
                 value={formData.company}
                 onChange={handleInputChange}
+                placeholder={t('enter_company')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('email_address')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('email_address')} *</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
+                placeholder={t('enter_email_address')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
@@ -140,7 +142,7 @@ const Purchase: React.FC = () => {
           <h2 className="text-xl font-bold mb-4">{t('billing_address')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('country')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('country')} *</label>
               <select
                 name="country"
                 value={formData.country}
@@ -156,45 +158,49 @@ const Purchase: React.FC = () => {
               {errors.country && <p className="text-red-500 text-xs">{errors.country}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('address')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('address')} *</label>
               <input
                 type="text"
                 name="address"
                 value={formData.address}
                 onChange={handleInputChange}
+                placeholder={t('enter_address')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.address && <p className="text-red-500 text-xs">{errors.address}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('city')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('city')} *</label>
               <input
                 type="text"
                 name="city"
                 value={formData.city}
                 onChange={handleInputChange}
+                placeholder={t('enter_city')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.city && <p className="text-red-500 text-xs">{errors.city}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('state')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('state')} *</label>
               <input
                 type="text"
                 name="state"
                 value={formData.state}
                 onChange={handleInputChange}
+                placeholder={t('enter_state')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.state && <p className="text-red-500 text-xs">{errors.state}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('zip_code')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('zip_code')} *</label>
               <input
                 type="text"
                 name="zipCode"
                 value={formData.zipCode}
                 onChange={handleInputChange}
+                placeholder={t('enter_zip_code')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.zipCode && <p className="text-red-500 text-xs">{errors.zipCode}</p>}
@@ -205,34 +211,37 @@ const Purchase: React.FC = () => {
           <h2 className="text-xl font-bold mb-4">{t('credit_card_details')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('card_number')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('card_number')} *</label>
               <input
                 type="text"
                 name="cardNumber"
                 value={formData.cardNumber}
                 onChange={handleInputChange}
+                placeholder={t('enter_card_number')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.cardNumber && <p className="text-red-500 text-xs">{errors.cardNumber}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('card_expiration')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('card_expiration')} *</label>
               <input
                 type="text"
                 name="cardExpiration"
                 value={formData.cardExpiration}
                 onChange={handleInputChange}
+                placeholder={t('enter_card_expiration')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.cardExpiration && <p className="text-red-500 text-xs">{errors.cardExpiration}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">{t('cvv')}</label>
+              <label className="block text-sm font-medium text-gray-700">{t('cvv')} *</label>
               <input
                 type="text"
                 name="cvv"
                 value={formData.cvv}
                 onChange={handleInputChange}
+                placeholder={t('enter_cvv')}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               />
               {errors.cvv && <p className="text-red-500 text-xs">{errors.cvv}</p>}

@@ -85,7 +85,7 @@ const Sell: React.FC = () => {
       toast.success(t('thank_you_for_submitting_your_art_piece'), {
         position: "top-center",
         autoClose: 3000, // 3 seconds
-        onClose: () => navigate('/artvituso-v2/') // Redirect to home after toast is closed
+        onClose: () => navigate('/artvituso/') // Redirect to home after toast is closed
       });
     }
   };
@@ -106,67 +106,73 @@ const Sell: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('art_piece_name')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('art_piece_name')} *</label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
+              placeholder={t('enter_art_piece_name')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('artist')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('artist')} *</label>
             <input
               type="text"
               name="artist"
               value={formData.artist}
               onChange={handleInputChange}
+              placeholder={t('enter_artist_name')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.artist && <p className="text-red-500 text-xs mt-1">{errors.artist}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('art_format')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('art_format')} *</label>
             <input
               type="text"
               name="format"
               value={formData.format}
               onChange={handleInputChange}
+              placeholder={t('enter_art_format')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.format && <p className="text-red-500 text-xs mt-1">{errors.format}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('date')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('date')} *</label>
             <input
               type="text"
               name="date"
               value={formData.date}
               onChange={handleInputChange}
+              placeholder={t('enter_date')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('price')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('price')} *</label>
             <input
               type="text"
               name="price"
               value={formData.price}
               onChange={handleInputChange}
+              placeholder={t('enter_price')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.price && <p className="text-red-500 text-xs mt-1">{errors.price}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">{t('contact_email')}</label>
+            <label className="block text-sm font-medium text-gray-700">{t('contact_email')} *</label>
             <input
               type="email"
               name="contactEmail"
               value={formData.contactEmail}
               onChange={handleInputChange}
+              placeholder={t('enter_contact_email')}
               className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
             />
             {errors.contactEmail && <p className="text-red-500 text-xs mt-1">{errors.contactEmail}</p>}
@@ -178,6 +184,7 @@ const Sell: React.FC = () => {
             name="description"
             value={formData.description}
             onChange={handleInputChange}
+            placeholder={t('enter_artwork_description')}
             className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
           />
           {errors.description && <p className="text-red-500 text-xs mt-1">{errors.description}</p>}
