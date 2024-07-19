@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 const Sell: React.FC = () => {
   const { t } = useTranslation();
-  const [image, setImage] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -32,7 +31,6 @@ const Sell: React.FC = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setImage(file);
       setPreview(URL.createObjectURL(file));
     }
   };
