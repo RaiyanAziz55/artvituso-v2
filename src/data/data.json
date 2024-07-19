@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "title": "Snow in New York, 1902",
+      "image_link": "src/assets/data-images/snow_in_new_york_1954.4.3.jpg",
+      "artist": "Robert Henri",
+      "format": "Oil on canvas",
+      "date": "1902",
+      "dimensions": "81.3 x 65.5 cm (32 x 25 13/16 in.) framed: 105.4 x 89.2 x 10.1 cm (41 1/2 x 35 1/8 x 4 in.)",
+      "credit_line": "Chester Dale Collection",
+      "accession_number": "1954.43",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "Robert Henri’s energetic but stark image of New York in the snow deviates from impressionist urban snow scenes of the period in several ways...",
+      "price": "$9.99"
+    },
+    {
+        "id": 2,
+      "title": "Young Woman in White, 1904",
+      "image_link": "src/assets/data-images/young_woman_in_white_1949.9.1.jpg",
+      "artist": "Robert Henri",
+      "format": "Oil on canvas",
+      "date": "1904",
+      "dimensions": "198.8 x 96.8 cm (78 1/4 x 38 1/8 in.) framed: 218.5 x 116.8 cm (86 x 46 in.)",
+      "credit_line": "Gift of Violet Organ",
+      "accession_number": "1949.91",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "Painted in a single day, Young Woman in White represents one of Robert Henri’s favorite professional models, the Czech-born Eugenie Stein...",
+      "price": "$9.99"
+    },
+    {
+        "id": 3,
+      "title": "Club Night, 1907",
+      "image_link": "src/assets/data-images/blue_morning_1963.10.82.jpg",
+      "artist": "George Bellows",
+      "format": "Oil on canvas",
+      "date": "1907",
+      "dimensions": "109.2 x 135 cm (43 x 53 1/8 in.) framed: 127.6 x 153 x 9.5 cm (50 1/4 x 60 1/4 x 3 3/4 in.)",
+      "credit_line": "John Hay Whitney Collection",
+      "accession_number": "1982.76.1",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "George Bellows’s paintings devoted to boxing were among the most popular pictures he produced during his lifetime and remain so today...",
+      "price": "$9.99"
+    },
+    {
+        "id": 4,
+      "title": "Forty-two Kids, 1907",
+      "image_link": "src/assets/data-images/forty-two_kids_2014.79.2.jpg",
+      "artist": "George Bellows",
+      "format": "Oil on canvas",
+      "date": "1907",
+      "dimensions": "106.7 x 153 cm (42 x 60 1/4 in.) framed: 124.1 x 170 x 7.3 cm (48 7/8 x 66 15/16 x 2 7/8 in.)",
+      "credit_line": "Corcoran Collection (Museum Purchase, William A. Clark Fund)",
+      "accession_number": "2014.79.2",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "Painted in August 1907, Forty-two Kids depicts a band of nude and partially clothed boys engaged in a variety of antics...",
+      "price": "$9.99"
+    },
+    {
+        "id": 5,
+      "title": "Little Girl in White (Queenie Burnett), 1907",
+      "image_link": "src/assets/data-images/little_girl_in_white_(queenie_burnett)_1983.1.2.jpg",
+      "artist": "George Bellows",
+      "format": "Oil on canvas",
+      "date": "1907",
+      "dimensions": "157.8 x 87 cm (62 3/16 x 34 1/4 in.) framed: 171.5 x 107 x 8.6 cm (67 1/2 x 42 1/8 x 3 3/8 in.)",
+      "credit_line": "Collection of Mr. and Mrs. Paul Mellon",
+      "accession_number": "1983.1.2",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "Advised by his friend and teacher Robert Henri to select subjects that reflected the realism of modern urban life, George Bellows portrayed the recreational activities of New York City’s lower-class children...",
+      "price": "$9.99"
+    },
+    {
+        "id": 6,
+      "title": "Both Members of This Club, 1909",
+      "image_link": "src/assets/data-images/both_members_of_this_club_1944.13.1.jpg",
+      "artist": "George Bellows",
+      "format": "Oil on canvas",
+      "date": "1909",
+      "dimensions": "115 x 160.5 cm (45 1/4 x 63 1/16 in.) framed: 133 x 177.8 cm (52 3/8 x 70 in.)",
+      "credit_line": "Chester Dale Collection",
+      "accession_number": "1944.13.1",
+      "image_use": "This image is in the public domain. Read our full Open Access policy for images.",
+      "description": "Painted in October 1909, the remarkably expressive and dynamic Both Members of This Club is the third and largest of George Bellows’s early prizefighting subjects...",
+      "price": "$9.99"
+    }
+  ]
+  
