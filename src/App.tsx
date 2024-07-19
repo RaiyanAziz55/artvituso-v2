@@ -10,6 +10,7 @@ import EventDetail from './pages/EventDetail';
 import Purchase from './pages/Purchase';
 import About from './pages/About';
 import Sell from './pages/Sell';
+import Faq from './pages/Faq';
 import './i18n'; // Import i18n configuration
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/artvituso/events/:id" element={<EventDetail />} />
         <Route path="/artvituso/about" element={<About />} />
         <Route path="/artvituso/sell" element={<Sell />} />
+        <Route path="/artvituso/faq" element={<Faq />} />
       </Routes>
       <Footer/>
     </Router>

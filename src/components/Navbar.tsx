@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
         <Link to="/artvituso/events" className="text-lg font-serif hover:underline">{t('EVENTS')}</Link>
         <Link to="/artvituso/explore" className="text-lg font-serif hover:underline">{t('EXPLORE')}</Link>
         <Link to="/artvituso/sell" className="text-lg font-serif hover:underline">{t('SELL')}</Link>
+        <Link to="/artvituso/faq" className="text-lg font-serif hover:underline">FAQ</Link>
       </div>
       <div className="flex items-center space-x-4">
         <div className="flex items-center border border-gray-400 rounded">

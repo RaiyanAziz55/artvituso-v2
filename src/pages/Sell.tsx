@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 const Sell: React.FC = () => {
+  const { t } = useTranslation();
   const [image, setImage] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [formData, setFormData] = useState({
@@ -25,7 +27,7 @@ const Sell: React.FC = () => {
     contactEmail: ''
   });
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -46,31 +48,31 @@ const Sell: React.FC = () => {
     let isValid = true;
 
     if (!formData.name) {
-      newErrors.name = 'Art Piece Name is required';
+      newErrors.name = t('art_piece_name_required');
       isValid = false;
     }
     if (!formData.artist) {
-      newErrors.artist = 'Artist is required';
+      newErrors.artist = t('artist_required');
       isValid = false;
     }
     if (!formData.format) {
-      newErrors.format = 'Art Format is required';
+      newErrors.format = t('art_format_required');
       isValid = false;
     }
     if (!formData.date || !/^\d{4}$/.test(formData.date)) {
-      newErrors.date = 'Valid Date is required (e.g., 2023)';
+      newErrors.date = t('valid_date_required');
       isValid = false;
     }
     if (!formData.price || isNaN(parseFloat(formData.price))) {
-      newErrors.price = 'Valid Price is required';
+      newErrors.price = t('valid_price_required');
       isValid = false;
     }
     if (!formData.contactEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contactEmail)) {
-      newErrors.contactEmail = 'Valid Email is required';
+      newErrors.contactEmail = t('valid_email_required');
       isValid = false;
     }
     if (!formData.description) {
-      newErrors.description = 'Description is required';
+      newErrors.description = t('description_required');
       isValid = false;
     }
 
@@ -82,31 +84,31 @@ const Sell: React.FC = () => {
     e.preventDefault();
     if (validate()) {
       // Show toast message
-      toast.success('Thank you for submitting your art piece!', {
-        position:"top-center",
+      toast.success(t('thank_you_for_submitting_your_art_piece'), {
+        position: "top-center",
         autoClose: 3000, // 3 seconds
-        onClose: () => history('/artvituso/') // Redirect to home after toast is closed
+        onClose: () => navigate('/artvituso/') // Redirect to home after toast is closed
       });
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Sell Your Art Piece</h1>
+      <h1 className="text-3xl font-bold mb-6">{t('sell_your_art_piece')}</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col items-center">
           {preview ? (
             <img src={preview} alt="Preview" className="w-64 h-64 object-cover mb-4" />
           ) : (
             <div className="w-64 h-64 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
-              <span className="text-gray-400">Image Preview</span>
+              <span className="text-gray-400">{t('image_preview')}</span>
             </div>
           )}
           <input type="file" accept="image/*" onChange={handleImageChange} className="mb-4" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Art Piece Name</label>
+            <label className="block text-sm font-medium text-gray-700">{t('art_piece_name')}</label>
             <input
               type="text"
               name="name"
@@ -117,7 +119,7 @@ const Sell: React.FC = () => {
             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Artist</label>
+            <label className="block text-sm font-medium text-gray-700">{t('artist')}</label>
             <input
               type="text"
               name="artist"
@@ -128,7 +130,7 @@ const Sell: React.FC = () => {
             {errors.artist && <p className="text-red-500 text-xs mt-1">{errors.artist}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Art Format</label>
+            <label className="block text-sm font-medium text-gray-700">{t('art_format')}</label>
             <input
               type="text"
               name="format"
@@ -139,7 +141,7 @@ const Sell: React.FC = () => {
             {errors.format && <p className="text-red-500 text-xs mt-1">{errors.format}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Date</label>
+            <label className="block text-sm font-medium text-gray-700">{t('date')}</label>
             <input
               type="text"
               name="date"
@@ -150,7 +152,7 @@ const Sell: React.FC = () => {
             {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Price</label>
+            <label className="block text-sm font-medium text-gray-700">{t('price')}</label>
             <input
               type="text"
               name="price"
@@ -161,7 +163,7 @@ const Sell: React.FC = () => {
             {errors.price && <p className="text-red-500 text-xs mt-1">{errors.price}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Contact Email</label>
+            <label className="block text-sm font-medium text-gray-700">{t('contact_email')}</label>
             <input
               type="email"
               name="contactEmail"
@@ -173,7 +175,7 @@ const Sell: React.FC = () => {
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">About this artwork</label>
+          <label className="block text-sm font-medium text-gray-700">{t('about_this_artwork')}</label>
           <textarea
             name="description"
             value={formData.description}
@@ -186,7 +188,7 @@ const Sell: React.FC = () => {
           type="submit"
           className="mt-4 bg-gray-800 text-white py-2 px-4 rounded"
         >
-          Submit
+          {t('submit')}
         </button>
       </form>
       <ToastContainer />

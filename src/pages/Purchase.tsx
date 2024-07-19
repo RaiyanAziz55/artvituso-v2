@@ -1,11 +1,14 @@
+// src/pages/Purchase.tsx
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 const Purchase: React.FC = () => {
+  const { t } = useTranslation();
   const location = useLocation();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const artItem = location.state?.artItem;
   const [formData, setFormData] = useState({
     name: '',
@@ -54,17 +57,17 @@ const Purchase: React.FC = () => {
       cvv: '',
     };
 
-    if (!formData.name) newErrors.name = 'Name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email address is invalid';
-    if (!formData.country) newErrors.country = 'Country is required';
-    if (!formData.address) newErrors.address = 'Address is required';
-    if (!formData.city) newErrors.city = 'City is required';
-    if (!formData.state) newErrors.state = 'State is required';
-    if (!formData.zipCode) newErrors.zipCode = 'Zip Code is required';
-    if (!formData.cardNumber) newErrors.cardNumber = 'Card Number is required';
-    if (!formData.cardExpiration) newErrors.cardExpiration = 'Card Expiration is required';
-    if (!formData.cvv) newErrors.cvv = 'CVV is required';
+    if (!formData.name) newErrors.name = t('name_required');
+    if (!formData.email) newErrors.email = t('email_required');
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = t('email_invalid');
+    if (!formData.country) newErrors.country = t('country_required');
+    if (!formData.address) newErrors.address = t('address_required');
+    if (!formData.city) newErrors.city = t('city_required');
+    if (!formData.state) newErrors.state = t('state_required');
+    if (!formData.zipCode) newErrors.zipCode = t('zip_code_required');
+    if (!formData.cardNumber) newErrors.cardNumber = t('card_number_required');
+    if (!formData.cardExpiration) newErrors.cardExpiration = t('card_expiration_required');
+    if (!formData.cvv) newErrors.cvv = t('cvv_required');
 
     setErrors(newErrors);
 
@@ -75,30 +78,30 @@ const Purchase: React.FC = () => {
     e.preventDefault();
     if (validateForm()) {
       // Show toast message
-      toast.success('Thank you for your purchase!', {
+      toast.success(t('thank_you_for_your_purchase'), {
         position: "top-center",
         autoClose: 3000, // 3 seconds
-        onClose: () => history('/artvituso/') // Redirect to home after toast is closed
+        onClose: () => navigate('/artvituso/') // Redirect to home after toast is closed
       });
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Your Order</h1>
+      <h1 className="text-3xl font-bold mb-6">{t('your_order')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <h2 className="text-xl font-bold mb-4">Order Details</h2>
-          <p className="mb-2"><strong>Art Piece:</strong> {artItem.title}</p>
-          <p className="mb-2"><strong>Price:</strong> {artItem.price}</p>
-          <p className="mb-2"><strong>Tax:</strong> ${(parseFloat(artItem.price) * 0.13).toFixed(2)}</p>
-          <p className="mb-2"><strong>Total:</strong> ${(parseFloat(artItem.price) * 1.13).toFixed(2)}</p>
+          <h2 className="text-xl font-bold mb-4">{t('order_details')}</h2>
+          <p className="mb-2"><strong>{t('art_piece')}:</strong> {artItem.title}</p>
+          <p className="mb-2"><strong>{t('price')}:</strong> {artItem.price}</p>
+          <p className="mb-2"><strong>{t('tax')}:</strong> ${(parseFloat(artItem.price) * 0.13).toFixed(2)}</p>
+          <p className="mb-2"><strong>{t('total')}:</strong> ${(parseFloat(artItem.price) * 1.13).toFixed(2)}</p>
         </div>
         <div>
-          <h2 className="text-xl font-bold mb-4">Contact Information</h2>
+          <h2 className="text-xl font-bold mb-4">{t('contact_information')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">First and Last Name</label>
+              <label className="block text-sm font-medium text-gray-700">{t('first_last_name')}</label>
               <input
                 type="text"
                 name="name"
@@ -109,7 +112,7 @@ const Purchase: React.FC = () => {
               {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Company</label>
+              <label className="block text-sm font-medium text-gray-700">{t('company')}</label>
               <input
                 type="text"
                 name="company"
@@ -119,7 +122,7 @@ const Purchase: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email Address</label>
+              <label className="block text-sm font-medium text-gray-700">{t('email_address')}</label>
               <input
                 type="email"
                 name="email"
@@ -134,26 +137,26 @@ const Purchase: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div>
-          <h2 className="text-xl font-bold mb-4">Billing Address</h2>
+          <h2 className="text-xl font-bold mb-4">{t('billing_address')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Country</label>
+              <label className="block text-sm font-medium text-gray-700">{t('country')}</label>
               <select
                 name="country"
                 value={formData.country}
                 onChange={handleInputChange}
                 className="mt-1 block w-full border border-gray-300 rounded py-2 px-3"
               >
-                <option value="">Select Country</option>
-                <option value="United States">United States</option>
-                <option value="Canada">Canada</option>
-                <option value="United Kingdom">United Kingdom</option>
+                <option value="">{t('select_country')}</option>
+                <option value="United States">{t('united_states')}</option>
+                <option value="Canada">{t('canada')}</option>
+                <option value="United Kingdom">{t('united_kingdom')}</option>
                 {/* Add more countries as needed */}
               </select>
               {errors.country && <p className="text-red-500 text-xs">{errors.country}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Address</label>
+              <label className="block text-sm font-medium text-gray-700">{t('address')}</label>
               <input
                 type="text"
                 name="address"
@@ -164,7 +167,7 @@ const Purchase: React.FC = () => {
               {errors.address && <p className="text-red-500 text-xs">{errors.address}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">City</label>
+              <label className="block text-sm font-medium text-gray-700">{t('city')}</label>
               <input
                 type="text"
                 name="city"
@@ -175,7 +178,7 @@ const Purchase: React.FC = () => {
               {errors.city && <p className="text-red-500 text-xs">{errors.city}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">State</label>
+              <label className="block text-sm font-medium text-gray-700">{t('state')}</label>
               <input
                 type="text"
                 name="state"
@@ -186,7 +189,7 @@ const Purchase: React.FC = () => {
               {errors.state && <p className="text-red-500 text-xs">{errors.state}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Zip Code</label>
+              <label className="block text-sm font-medium text-gray-700">{t('zip_code')}</label>
               <input
                 type="text"
                 name="zipCode"
@@ -199,10 +202,10 @@ const Purchase: React.FC = () => {
           </form>
         </div>
         <div>
-          <h2 className="text-xl font-bold mb-4">Credit Card Details</h2>
+          <h2 className="text-xl font-bold mb-4">{t('credit_card_details')}</h2>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Card Number</label>
+              <label className="block text-sm font-medium text-gray-700">{t('card_number')}</label>
               <input
                 type="text"
                 name="cardNumber"
@@ -213,7 +216,7 @@ const Purchase: React.FC = () => {
               {errors.cardNumber && <p className="text-red-500 text-xs">{errors.cardNumber}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Card Expiration</label>
+              <label className="block text-sm font-medium text-gray-700">{t('card_expiration')}</label>
               <input
                 type="text"
                 name="cardExpiration"
@@ -224,7 +227,7 @@ const Purchase: React.FC = () => {
               {errors.cardExpiration && <p className="text-red-500 text-xs">{errors.cardExpiration}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">CVV</label>
+              <label className="block text-sm font-medium text-gray-700">{t('cvv')}</label>
               <input
                 type="text"
                 name="cvv"
@@ -237,8 +240,9 @@ const Purchase: React.FC = () => {
           </form>
         </div>
       </div>
-      <div className="mt-6">
-        <button onClick={handleSubmit} className="bg-gray-800 text-white py-2 px-4 rounded">Place Order</button>
+      <div className="mt-6 flex justify-between">
+        <button onClick={() => navigate(-1)} className="bg-gray-800 text-white py-2 px-4 rounded">{t('back')}</button>
+        <button onClick={handleSubmit} className="bg-gray-800 text-white py-2 px-4 rounded">{t('place_order')}</button>
       </div>
       <ToastContainer />
     </div>

@@ -47,52 +47,52 @@ const Explore = () => {
       <div className="flex">
         <div className="w-1/4 pr-4">
           <div className="mb-6">
-            <label className="block text-lg font-bold mb-2" htmlFor="search">SEARCH</label>
+            <label className="block text-lg font-bold mb-2" htmlFor="search">{t('search')}</label>
             <input
               type="text"
               id="search"
-              placeholder="Search..."
+              placeholder={t('Search')}
               className="w-full border border-gray-400 rounded py-2 px-4"
               value={searchTerm}
               onChange={handleSearchChange}
             />
           </div>
           <div className="mb-6">
-            <label className="block text-lg font-bold mb-2" htmlFor="filter">FILTER</label>
+            <label className="block text-lg font-bold mb-2" htmlFor="filter">{t('filter')}</label>
             <div className="mb-4">
-              <label className="block font-semibold mb-1" htmlFor="artist">Artist</label>
+              <label className="block font-semibold mb-1" htmlFor="artist">{t('artist')}</label>
               <select 
                 id="artist" 
                 className="w-full border border-gray-400 rounded py-2 px-4"
                 value={selectedArtist}
                 onChange={handleArtistChange}
               >
-                <option value="">Select Artist</option>
+                <option value="">{t('select_artist')}</option>
                 <option value="Robert Henri">Robert Henri</option>
                 <option value="George Bellows">George Bellows</option>
               </select>
             </div>
             <div className="mb-4">
-              <label className="block font-semibold mb-1" htmlFor="format">Art Format</label>
+              <label className="block font-semibold mb-1" htmlFor="format">{t('art_format')}</label>
               <select 
                 id="format" 
                 className="w-full border border-gray-400 rounded py-2 px-4"
                 value={selectedFormat}
                 onChange={handleFormatChange}
               >
-                <option value="">Select Format</option>
+                <option value="">{t('select_format')}</option>
                 <option value="Oil on canvas">Oil on canvas</option>
               </select>
             </div>
             <div className="mb-4">
-              <label className="block font-semibold mb-1" htmlFor="time-period">Time-Period</label>
+              <label className="block font-semibold mb-1" htmlFor="time-period">{t('time_period')}</label>
               <select 
                 id="time-period" 
                 className="w-full border border-gray-400 rounded py-2 px-4"
                 value={selectedTimePeriod}
                 onChange={handleTimePeriodChange}
               >
-                <option value="">Select Time-Period</option>
+                <option value="">{t('select_time_period')}</option>
                 <option value="1902">1902</option>
                 <option value="1904">1904</option>
                 <option value="1907">1907</option>
@@ -103,7 +103,7 @@ const Explore = () => {
               className="w-full bg-gray-800 text-white py-2 rounded"
               onClick={() => { /* you can add any additional logic needed when applying the filter */ }}
             >
-              Apply
+              {t('apply')}
             </button>
           </div>
         </div>

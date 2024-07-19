@@ -1,14 +1,16 @@
 // src/pages/ArtDetail.tsx
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ArtDetail: React.FC = () => {
+  const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
   const artItem = location.state?.artItem;
 
   if (!artItem) {
-    return <div>Art piece not found</div>;
+    return <div>{t('art_piece_not_found')}</div>;
   }
 
   return (
@@ -21,13 +23,14 @@ const ArtDetail: React.FC = () => {
           {/* Add more thumbnails if needed */}
         </div>
         <div className="text-left">
-          <h3 className="text-xl font-bold mb-2">Artist: {artItem.artist}</h3>
-          <h3 className="text-xl font-bold mb-2">Art Format: {artItem.format}</h3>
-          <h3 className="text-xl font-bold mb-2">Date: {artItem.date}</h3>
-          <h3 className="text-xl font-bold mb-2">Price: {artItem.price}</h3>
-          <h3 className="text-xl font-bold mb-2 ">About this artwork</h3>
+          <h3 className="text-xl font-bold mb-2">{t('artist')}: {artItem.artist}</h3>
+          <h3 className="text-xl font-bold mb-2">{t('art_format')}: {artItem.format}</h3>
+          <h3 className="text-xl font-bold mb-2">{t('date')}: {artItem.date}</h3>
+          <h3 className="text-xl font-bold mb-2">{t('price')}: {artItem.price}</h3>
+          <h3 className="text-xl font-bold mb-2 ">{t('about_this_artwork')}</h3>
           <p className="mb-8 ">{artItem.description}</p>
-          <Link className="mt-4 bg-gray-800 text-white py-2 px-4 rounded" to={`/artvituso/explore/${artItem.id}/purchase`}  state={{ artItem}}>Purchase this artwork</Link>
+          <button onClick={() => navigate(-1)} className="mt-4 bg-gray-800 text-white py-2 px-4 rounded mr-8">{t('back')}</button>
+          <Link className="mt-4 bg-gray-800 text-white py-2 px-4 rounded" to={`/artvituso/explore/${artItem.id}/purchase`} state={{ artItem }}>{t('purchase_this_artwork')}</Link>
         </div>
       </section>
     </div>
