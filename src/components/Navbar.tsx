@@ -10,18 +10,18 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="flex items-center justify-between p-4 border-2 border-gray-900">
-      <Link to={'/artvituso'} >
+      <Link to={'/artvituso-v2'} >
         <div className="text-3xl font-serif font-bold">
           ART<span className="italic">VIRTUOSO</span>
         </div>
       </Link>
       <div className="flex space-x-6">
-        <Link to="/artvituso/" className="text-lg font-serif hover:underline">{t('HOME')}</Link>
-        <Link to="/artvituso/about" className="text-lg font-serif hover:underline">{t('ABOUT')}</Link>
-        <Link to="/artvituso/events" className="text-lg font-serif hover:underline">{t('EVENTS')}</Link>
-        <Link to="/artvituso/explore" className="text-lg font-serif hover:underline">{t('EXPLORE')}</Link>
-        <Link to="/artvituso/sell" className="text-lg font-serif hover:underline">{t('SELL')}</Link>
-        <Link to="/artvituso/faq" className="text-lg font-serif hover:underline">FAQ</Link>
+        <Link to="/artvituso-v2/" className="text-lg font-serif hover:underline">{t('HOME')}</Link>
+        <Link to="/artvituso-v2/about" className="text-lg font-serif hover:underline">{t('ABOUT')}</Link>
+        <Link to="/artvituso-v2/events" className="text-lg font-serif hover:underline">{t('EVENTS')}</Link>
+        <Link to="/artvituso-v2/explore" className="text-lg font-serif hover:underline">{t('EXPLORE')}</Link>
+        <Link to="/artvituso-v2/sell" className="text-lg font-serif hover:underline">{t('SELL')}</Link>
+        <Link to="/artvituso-v2/faq" className="text-lg font-serif hover:underline">FAQ</Link>
       </div>
       <div className="flex items-center space-x-4">
         <div className="flex items-center border border-gray-400 rounded">

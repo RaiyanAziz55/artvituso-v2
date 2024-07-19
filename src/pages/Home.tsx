@@ -18,7 +18,7 @@ const Home = () => {
           <p className="relative text-lg mb-4">
             {t('welcome_message')}
           </p>
-          <Link to="/artvituso/explore" className="text-xl font-serif underline">{t('explore')}</Link>
+          <Link to="/artvituso-v2/explore" className="text-xl font-serif underline">{t('explore')}</Link>
         </div>
       </section>
       <section className="py-12 text-center">
@@ -48,7 +48,7 @@ const Home = () => {
           <p className="relative text-lg mb-4">
             {t('events_message')}
           </p>
-          <Link to="/artvituso/events" className="text-xl font-serif underline">{t('explore_events')}</Link>
+          <Link to="/artvituso-v2/events" className="text-xl font-serif underline">{t('explore_events')}</Link>
         </div>
       </section>
     </div>

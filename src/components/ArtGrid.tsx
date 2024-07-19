@@ -14,7 +14,7 @@ const ArtGrid: React.FC<ArtGridProps> = ({ artItems }) => {
     <div className="w-3/4 grid grid-cols-2 gap-4">
       {artItems.map(item => (
         <Link
-          to={`/artvituso/explore/${item.id}`}
+          to={`/artvituso-v2/explore/${item.id}`}
           state={{artItem: item}}
           key={item.id}
         >

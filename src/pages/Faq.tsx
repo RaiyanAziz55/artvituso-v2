@@ -17,13 +17,13 @@ const Faq: React.FC = () => {
           <strong>{t('how_do_i_explore_artworks')}</strong>
         </p>
         <p className="text-lg mb-4">
-          {t('explore_artworks_description')} <Link to="/artvituso/explore" className="underline text-blue-500">{t('explore_page')}</Link>.
+          {t('explore_artworks_description')} <Link to="/artvituso-v2/explore" className="underline text-blue-500">{t('explore_page')}</Link>.
         </p>
         <p className="text-lg mb-2">
           <strong>{t('how_do_i_purchase_artwork')}</strong>
         </p>
         <p className="text-lg mb-4">
-          {t('purchase_artwork_description')} <Link to="/artvituso/explore" className="underline text-blue-500">{t('explore_page')}</Link>.
+          {t('purchase_artwork_description')} <Link to="/artvituso-v2/explore" className="underline text-blue-500">{t('explore_page')}</Link>.
         </p>
       </div>
 
@@ -33,7 +33,7 @@ const Faq: React.FC = () => {
           <strong>{t('how_do_i_sell_artwork')}</strong>
         </p>
         <p className="text-lg mb-4">
-          {t('sell_artwork_description')} <Link to="/artvituso/sell" className="underline text-blue-500">{t('sell_page')}</Link>.
+          {t('sell_artwork_description')} <Link to="/artvituso-v2/sell" className="underline text-blue-500">{t('sell_page')}</Link>.
         </p>
         <p className="text-lg mb-2">
           <strong>{t('what_information_to_provide')}</strong>
@@ -49,13 +49,13 @@ const Faq: React.FC = () => {
           <strong>{t('how_do_i_attend_events')}</strong>
         </p>
         <p className="text-lg mb-4">
-          {t('attend_events_description')} <Link to="/artvituso/events" className="underline text-blue-500">{t('events_page')}</Link>.
+          {t('attend_events_description')} <Link to="/artvituso-v2/events" className="underline text-blue-500">{t('events_page')}</Link>.
         </p>
         <p className="text-lg mb-2">
           <strong>{t('types_of_events')}</strong>
         </p>
         <p className="text-lg mb-4">
-          {t('events_types_description')} <Link to="/artvituso/events" className="underline text-blue-500">{t('events_page')}</Link>.
+          {t('events_types_description')} <Link to="/artvituso-v2/events" className="underline text-blue-500">{t('events_page')}</Link>.
         </p>
       </div>
     </div>

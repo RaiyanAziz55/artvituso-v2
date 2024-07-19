@@ -81,7 +81,7 @@ const Purchase: React.FC = () => {
       toast.success(t('thank_you_for_your_purchase'), {
         position: "top-center",
         autoClose: 3000, // 3 seconds
-        onClose: () => navigate('/artvituso/') // Redirect to home after toast is closed
+        onClose: () => navigate('/artvituso-v2/') // Redirect to home after toast is closed
       });
     }
   };

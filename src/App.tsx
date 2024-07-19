@@ -18,15 +18,15 @@ const App = () => {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/artvituso/" element={<Home />} />
-        <Route path="/artvituso/explore" element={<Explore />} />
-        <Route path="/artvituso/explore/:id" element={<ArtDetail />} />
-        <Route path="/artvituso/explore/:id/purchase" element={<Purchase />} />
-        <Route path="/artvituso/events" element={<Event />} />
-        <Route path="/artvituso/events/:id" element={<EventDetail />} />
-        <Route path="/artvituso/about" element={<About />} />
-        <Route path="/artvituso/sell" element={<Sell />} />
-        <Route path="/artvituso/faq" element={<Faq />} />
+        <Route path="/artvituso-v2-v2/" element={<Home />} />
+        <Route path="/artvituso-v2/explore" element={<Explore />} />
+        <Route path="/artvituso-v2/explore/:id" element={<ArtDetail />} />
+        <Route path="/artvituso-v2/explore/:id/purchase" element={<Purchase />} />
+        <Route path="/artvituso-v2/events" element={<Event />} />
+        <Route path="/artvituso-v2/events/:id" element={<EventDetail />} />
+        <Route path="/artvituso-v2/about" element={<About />} />
+        <Route path="/artvituso-v2/sell" element={<Sell />} />
+        <Route path="/artvituso-v2/faq" element={<Faq />} />
       </Routes>
       <Footer/>
     </Router>

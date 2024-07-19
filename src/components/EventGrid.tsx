@@ -15,7 +15,7 @@ const EventGrid = () => {
     return (
         <div className="w-full grid grid-cols-2 gap-4">
         {artItems.map(item => (
-            <Link to={`/artvituso/events/${item.id}`} key={item.id}>
+            <Link to={`/artvituso-v2/events/${item.id}`} key={item.id}>
               <Card 
                 image={item.image} 
                 title={item.title} 

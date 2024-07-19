@@ -30,7 +30,7 @@ const ArtDetail: React.FC = () => {
           <h3 className="text-xl font-bold mb-2 ">{t('about_this_artwork')}</h3>
           <p className="mb-8 ">{artItem.description}</p>
           <button onClick={() => navigate(-1)} className="mt-4 bg-gray-800 text-white py-2 px-4 rounded mr-8">{t('back')}</button>
-          <Link className="mt-4 bg-gray-800 text-white py-2 px-4 rounded" to={`/artvituso/explore/${artItem.id}/purchase`} state={{ artItem }}>{t('purchase_this_artwork')}</Link>
+          <Link className="mt-4 bg-gray-800 text-white py-2 px-4 rounded" to={`/artvituso-v2/explore/${artItem.id}/purchase`} state={{ artItem }}>{t('purchase_this_artwork')}</Link>
         </div>
       </section>
     </div>
